@@ -17,12 +17,13 @@ module.exports = {
       },
       backgroundImage: {
         'bubble-bg': "url('/images/buuble.svg')",
-      }
+      },
+      letterSpacing: {
+        'ls': '3.5px',
+  
+      },
     },
-    letterSpacing: {
-      'ls': '3.5px',
 
-    },
 
   },
   plugins: [],

@@ -6,6 +6,36 @@
     <title>Document</title>
     <!-- css link -->
     <link rel="stylesheet" href="/css/style.css" />
+    <!-- play cdn tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind script -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#39DB4A",
+              black: "#272727",
+              para: "#4A4A4A",
+            },
+            fontFamily: {
+              Inter: ["Inter"],
+            },
+            width: {
+              90: "90%",
+              80: "80%",
+            },
+            backgroundImage: {
+              "bubble-bg": "url('/images/buuble.svg')",
+            },
+            letterSpacing: {
+              ls: "3.5px",
+            },
+          },
+        },
+      };
+    </script>
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,10 +60,10 @@
   <body class="h-auto w-full font-Inter">
     <header class="my-6 w-90 mx-auto">
       <nav
-        class="flex flex-col gap-5 w-full lg:flex-row justify-between items-center"
+        class="flex flex-col gap-5 w-full lg:flex-row justify-between items-center md:gap-10 md:flex-row"
       >
         <img src="/images/logo.svg" alt="logo.png" />
-        <ul class="flex gap-6 text-base lg:gap-12 lg:text-lg">
+        <ul class="flex gap-6 text-sm lg:gap-12 lg:text-lg md:text-sm">
           <li><a href="">Home</a></li>
           <li class="flex items-center gap-2">
             <a href="">Menu</a>
@@ -85,7 +115,9 @@
           </li>
           <li><a href="">Offers</a></li>
         </ul>
-        <div class="lg:flex lg:items-center lg:gap-10 hidden">
+        <div
+          class="flex flex-row gap-2 items-center md:flex-row lg:flex-row md:gap-5 lg:gap-5"
+        >
           <div class="relative w-9 h-10 flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +146,7 @@
           </div>
 
           <button
-            class="bg-primary px-8 py-3 flex gap-2 items-center rounded-3xl text-white text-lg font-medium"
+            class="bg-primary px-8 py-3 flex gap-2 items-center rounded-3xl text-white text-lg font-medium md:px-6 md:py-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,6 +154,7 @@
               height="24"
               viewBox="0 0 24 24"
               fill="none"
+              class="md:w-[16px] md:h-[16px]"
             >
               <g clip-path="url(#clip0_1_278)">
                 <path
@@ -141,26 +174,26 @@
       </nav>
       <!-- hero section start -->
       <section
-        class="grid grid-cols-1 grid-rows-1 items-center mx-auto justify-items-end mt-24 lg:my-20 gap-10 lg:grid-cols-2 lg:grid-rows-1"
+        class="grid grid-cols-1 grid-rows-1 items-center mx-auto justify-items-end mt-16 lg:my-20 gap-10 lg:grid-cols-2 lg:grid-rows-1"
       >
         <div class="flex flex-col gap-10">
-          <h1 class="text-5xl lg:text-6xl font-extrabold">
+          <h1 class="text-4xl lg:text-6xl font-extrabold md:text-5xl">
             Dive into Delights Of Delectable
             <span class="text-primary">Food</span>
           </h1>
-          <p class="text-para font-medium text-xl lg:text-2xl">
+          <p class="text-para font-medium text-lg lg:text-2xl">
             Where Each Plate Weaves a Story of Culinary Mastery and Passionate
             Craftsmanship
           </p>
           <div class="flex items-center gap-10">
             <button
-              class="bg-primary px-8 py-3 flex gap-2 items-center rounded-3xl text-white text-lg font-medium"
+              class="bg-primary px-8 py-2 lg:px-8 lg:py-3 flex gap-2 items-center rounded-xl lg:rounded-3xl text-white lg:text-lg text-xs font-medium"
             >
               Order Now
             </button>
             <button class="flex items-center">
               <div
-                class="h-16 w-16 bg-white rounded-full shadow-xl flex items-center justify-center"
+                class="lg:h-16 lg:w-16 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -168,6 +201,7 @@
                   height="24"
                   viewBox="0 0 24 28"
                   fill="none"
+                  class="h-[20px] w-[16px] lg:h-[24px] lg:w-[20px]"
                 >
                   <path
                     d="M22.5 11.4019C24.5 12.5566 24.5 15.4434 22.5 16.5981L4.49999 26.9904C2.49999 28.1451 -1.34201e-06 26.7017 -1.24107e-06 24.3923L-3.32543e-07 3.60769C-2.31596e-07 1.29829 2.5 -0.145083 4.5 1.00962L22.5 11.4019Z"
@@ -175,7 +209,9 @@
                   />
                 </svg>
               </div>
-              <span class="text-lg font-semibold text-para">Watch Videos</span>
+              <span class="lg:text-lg text-sm font-semibold text-para"
+                >Watch Videos</span
+              >
             </button>
           </div>
         </div>
@@ -434,12 +470,14 @@
           >
             Customer Favorites
           </p>
-          <h1 class="text-2xl lg:text-4xl font-bold capitalize text-center">
+          <h1
+            class="text-2xl lg:text-4xl font-bold capitalize text-center md:text-3xl"
+          >
             Popular Catagories
           </h1>
         </div>
         <div
-          class="grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-10 w-80 mx-auto"
+          class="grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-10 w-80 mx-auto md:grid-cols-2 md:grid-rows-2"
         >
           <!-- first item -->
           <div
@@ -516,7 +554,7 @@
             >
               Special Dishes
             </p>
-            <h1 class="text-2xl lg:text-4xl font-bold capitalize">
+            <h1 class="text-2xl lg:text-4xl font-bold capitalize md:text-3xl">
               Standout Dishes <br />From Our Menu
             </h1>
           </div>
@@ -572,7 +610,7 @@
           </div>
         </div>
         <div
-          class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-1 gap-10 mx-auto"
+          class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 gap-10 mx-auto"
         >
           <!-- first food -->
           <div
@@ -780,7 +818,7 @@
         >
           <!-- 1st -->
           <div class="relative">
-            <img src="./images/hero-2.svg" alt="hero-2.svg" />
+            <img src="./images/hero-2.svg" alt="hero-2.svg" class="mx-auto" />
 
             <img
               src="./images/bubble-2.svg"
@@ -790,7 +828,7 @@
             <img
               src="./images/emoji-1.svg"
               alt="smile-emoji.svg"
-              class="absolute bottom-56"
+              class="absolute bottom-56 md:left-16"
             />
             <img
               src="./images/pizza-emoji.svg"
@@ -885,7 +923,7 @@
         </div>
       </section>
       <!-- service sec -->
-      <section class="mx-auto w-90 my-40">
+      <section class="mx-auto w-90 lg:my-40 my-20">
         <!-- 1st grid -->
         <div
           class="grid lg:grid-cols-2 grid-cols-1 gap-10 lg:gap-32 items-center"
@@ -913,7 +951,9 @@
             </div>
           </div>
           <!-- 2nd grid -->
-          <div class="grid grid-cols-2 grid-rows-2 gap-10 lg:w-80 mx-auto">
+          <div
+            class="grid lg:grid-cols-2 lg:grid-rows-2 grid-cols-1 grid-rows-4 gap-10 lg:w-80 mx-auto md:grid-cols-2 md:grid-rows-2"
+          >
             <div
               class="bg-white rounded-2xl shadow-xl flex flex-col items-center px-6 py-8 justify-center text-center gap-2"
             >
@@ -1056,7 +1096,7 @@
     </main>
     <!-- footer start -->
     <footer
-      class="w-90 mx-auto grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 mb-10 mt-28 gap-10"
+      class="w-90 mx-auto grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 mb-10 mt-28 gap-10 md:grid-cols-2 md:grid-rows-2 md:items-start"
     >
       <div class="flex flex-col">
         <img src="./images/logo.svg" alt="logo.svg" class="lg:h-20 h-36 w-36" />
@@ -1087,58 +1127,28 @@
         <ul class="text-base font-medium text-[#555] flex flex-col gap-3">
           <li><a href="#">example@email.com</a></li>
           <li><a href="#">+64 958 248 966</a></li>
-          <li><a href="#">Social media</a></li>
+          <li class="mb-3"><a href="#">Social media</a></li>
         </ul>
         <div class="flex items-center gap-3">
           <div
             class="bg-[#39DB4A] h-10 w-10 rounded-full flex items-center justify-center"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="23"
-              viewBox="0 0 18 29"
-              fill="none"
-            >
-              <path
-                d="M16 2H12.1818C10.4941 2 8.8754 2.67045 7.68209 3.86387C6.48863 5.05728 5.81818 6.6759 5.81818 8.36364V12.1818H2V17.2727H5.81818V27.4545H10.9091V17.2727H14.7273L16 12.1818H10.9091V8.36364C10.9091 8.02608 11.0432 7.70237 11.2819 7.46368C11.5205 7.225 11.8443 7.09091 12.1818 7.09091H16V2Z"
-                stroke="white"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <i class="lab la-facebook-f text-2xl text-white"></i>
           </div>
           <div
             class="bg-[#39DB4A] h-10 w-10 rounded-full flex items-center justify-center"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="23"
-              height="23"
-              viewBox="0 0 26 26"
-              fill="none"
-            >
-              <path
-                d="M13 17.8891C15.7 17.8891 17.8889 15.7002 17.8889 13.0002C17.8889 10.3002 15.7 8.11133 13 8.11133C10.3 8.11133 8.11115 10.3002 8.11115 13.0002C8.11115 15.7002 10.3 17.8891 13 17.8891Z"
-                stroke="#fff"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2 17.8889V8.11111C2 4.73604 4.73604 2 8.11111 2H17.8889C21.2639 2 24 4.73604 24 8.11111V17.8889C24 21.2639 21.2639 24 17.8889 24H8.11111C4.73604 24 2 21.2639 2 17.8889Z"
-                stroke="#fff"
-                stroke-width="2.5"
-              />
-              <path
-                d="M19.7222 6.29069L19.7351 6.27637"
-                stroke="#fff"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            <i class="lab la-instagram text-2xl text-white"></i>
+          </div>
+          <div
+            class="bg-[#39DB4A] h-10 w-10 rounded-full flex items-center justify-center"
+          >
+            <i class="lab la-youtube text-2xl text-white"></i>
+          </div>
+          <div
+            class="bg-[#39DB4A] h-10 w-10 rounded-full flex items-center justify-center"
+          >
+            <i class="lab la-gulp text-2xl text-white"></i>
           </div>
         </div>
       </div>
